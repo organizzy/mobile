@@ -1,0 +1,27 @@
+ion-header-bar.bar-stable.nav-title-slide-ios7(align-title="left")
+  .buttons
+    a.button.button-clear(ui-sref="login")
+      i.icon.ion-ios7-arrow-back
+  h1.title Register
+
+ion-content#page-register(animation='slide-left-right').has-header
+  form(name="form",ng-submit='submit()',novalidate)
+    .list
+      label.item.item-input.item-stacked-label
+        span.input-label User name
+        input(type="text",ng-model="data.username",placeholder="username",name="username"
+          required,ng-pattern="/[a-zA-Z0-9.-]+/",ng-minlength="4")
+      label.item.item-input.item-stacked-label
+        span.input-label Email
+        input(type="email",ng-model="data.email",placeholder="name@example.org",
+          required)
+      label.item.item-input.item-stacked-label
+        span.input-label Password
+        input(type="password",ng-model="data.password",placeholder="****",required)
+      label.item.item-input.item-stacked-label
+        span.input-label Password
+        input(type="password",ng-model="data.password2",placeholder="****",required)
+      label.item
+        button.button.button-block.button-positive(type='submit') Register
+        
+      div(ng-show="form.username.$error.required") Tell us your name.

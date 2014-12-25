@@ -1,0 +1,15 @@
+ion-content#page-login(animation='slide-left-right')
+  .logo
+    img(src="img/logo.png")
+  form(name='loginForm',ng-submit='login()')
+    .list
+      label.item.item-input.item-stacked-label
+        span.input-label Email or Username
+        input(type="text",ng-model="data.email",placeholder="name@example.org",
+          required,ng-pattern="/[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\\.[a-z]+/")
+      label.item.item-input.item-stacked-label
+        span.input-label Email
+        input(type="password",ng-model="data.password",placeholder="****")
+      label.item
+        button.button.button-block.button-positive(type='submit') Log in
+      a(ui-sref="register") Register
