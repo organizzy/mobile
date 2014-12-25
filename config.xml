@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget 
+  id="org.organizzy.mobile" 
+  android-versionCode="10" 
+  version="0.1.0" 
+  xmlns="http://www.w3.org/ns/widgets" 
+  xmlns:cdv="http://cordova.apache.org/ns/1.0"
+  xmlns:gap   = "http://phonegap.com/ns/1.0">
+    <name>Organizzy</name>
+    <description>
+        Aplikasi keren
+    </description>
+    <author email="dev@organizzy.org" href="http://organizzy.org/">
+      Organizzy Team
+    </author>
+    <content src="index.html" />
+    <icon src="assets/icon.png" />
+    <access origin="*" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    
+    <gap:plugin name="com.ionic.keyboard" />
+    
+    <feature name="http://api.phonegap.com/1.0/network" />
+    <feature name="StatusBar">
+        <param name="ios-package" onload="true" value="CDVStatusBar" />
+    </feature>
+    <feature name="Keyboard">
+        <param name="id" value="com.ionic.keyboard" />
+    </feature>
+    
+</widget>
